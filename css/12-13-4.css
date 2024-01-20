@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.header{
+    height: 100px;
+    background: slateblue;
+}
+.logo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.nav{
+    float: right;
+}
+.main{}
+.main > li{
+    float: left;
+    margin-top: 50px;
+    position: relative;
+}
+.main > li > a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    background: pink;
+    line-height: 50px;
+    text-align: center;
+    color: navy;
+    padding: 0 10px;
+}
+.main > li:hover > a{
+    background: purple;
+    color: white;
+}
+
+.sub{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}
+.sub li{}
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: burlywood  ;
+    text-align: center;
+    color: white;
+}
+.sub li a:hover{
+    background: white;
+    color: sienna ;
+}
+.sub_bg{
+    height: 160px;
+    width: 1200px;
+    background: burlywood  ;
+    position: absolute;
+left: 0;
+top: 100px;
+display: none;
+}
+
+
+
+
+
+.section{
+    height: 600px;
+    background: lightskyblue;
+}

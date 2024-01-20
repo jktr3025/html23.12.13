@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/12-13-4.css">
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".main > li , .sub_bg").hover(function(){
+                $(".sub ,.sub_bg").stop().slideDown();
+            },function(){
+                $(".sub ,.sub_bg").stop().slideUp();
+
+            }) //hover
+
+        }) //jquery
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1 class="logo">LOGO</h1>
+
+            <nav class="nav">
+                <ul class="main">
+                    <li>
+                        <a href="#">main_menu1</a>
+                        <ul class="sub">
+                            <li><a href="#">sub_menu1</a></li>
+                            <li><a href="#">sub_menu2</a></li>
+                            <li><a href="#">sub_menu3</a></li>
+                        </ul><!-- sub -->
+                    </li>
+                    <li>
+                        <a href="#">main_menu2</a>
+                        <ul class="sub">
+                            <li><a href="#">sub_menu1</a></li>
+                            <li><a href="#">sub_menu2</a></li>
+                        </ul><!-- sub -->
+                    </li>
+                    <li>
+                        <a href="#">main_menu3</a>
+                        <ul class="sub">
+                            <li><a href="#">sub_menu1</a></li>
+                            <li><a href="#">sub_menu2</a></li>
+                            <li><a href="#">sub_menu3</a></li>
+                            <li><a href="#">sub_menu4</a></li>
+                        </ul><!-- sub -->
+                    </li>
+                    <li>
+                        <a href="#">main_menu4</a>
+                        <ul class="sub">
+                            <li><a href="#">sub_menu1</a></li>
+                            <li><a href="#">sub_menu2</a></li>
+                            <li><a href="#">sub_menu3</a></li>
+                        </ul><!-- sub -->
+                    </li>
+                </ul><!-- main -->
+            </nav><!-- nav -->
+        </header><!-- header -->
+        <div class="sub_bg"></div><!-- sub_bg -->
+
+        <section class="section">
+            contents
+        </section><!-- section -->
+    </div><!-- wrap -->
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+        }
+        .wrap {
+            width: 1200px;
+            height: 700px;
+            background: lightcoral;
+            margin: 0 auto;
+        }
+        .pop_bg{
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+       
+        .pop{
+            width: 400px;
+            height: 300px;
+            border: 2px solid darkslateblue;
+            position: relative;
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            background: white;
+        }
+        .pop h1{
+            text-align: center;
+            color: midnightblue;
+            font-size: 40px;
+            margin: 20px 0;
+            text-shadow: 0 2px 2px #333;
+        }
+        .pop p{
+            text-align: justify;
+        }
+        .pop .close{
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            padding: 10px 5px;
+        }
+    </style>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".close").click(function(){
+                $(".pop , .pop_bg").hide();
+                            }) // close click
+            $(".c_pop").click(function(){
+                $(".pop , .pop_bg").show();
+                            }) // c_pop click
+        }) //jquery
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        컨텐츠 영역 <!-- (모달팝업) -->
+        <a class="c_pop" href="#">pop up</a>
+    </div><!-- wrap -->
+    <div class="pop_bg"></div>
+    <div class="pop">
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt harum, nulla dolore expedita natus ea
+            delectus, corrupti consequuntur cupiditate eius ullam culpa officiis optio animi quam alias adipisci eaque
+            totam.
+        </p>
+        <button class="close">닫기 X</button>
+    </div><!-- pop -->
+
+</body>
+
+</html>

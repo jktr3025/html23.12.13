@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            background: dodgerblue;
+        }
+        h1{
+            text-align: center;
+            /* line-height: 3; */
+            /* margin: 100px 0; */
+            padding: 50px 0;
+            /* border: 1px solid darkblue; */
+        }
+        .fade{
+            /* border: 1px solid darkmagenta; */
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .fade li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 600px;
+            height: 400px;
+        }
+        .fade li a{}
+        .fade li a img{}
+    </style>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            // $(".fade li").hide();
+            // $(".fade li").eq(0).show();
+
+            // $(".fade li").hide();
+            // $(".fade li:nth-child(1)").show();
+            
+            // $(".fade li:gt(0)").hide() ;  //gt(숫자) : "숫자"보다 크다, lt:(숫자) : "숫자"보다 작다
+
+            // $(".fade li:not(:gt(0))").hide() // not은 ~아닌 것(부정)
+            $(".fade li").eq(0).siblings().hide();
+
+            var num = 0; // 현재보이는 그림 번호
+            var count = $(".fade li").length -1;
+                    // .fade가 가진 li 갯수를 구해주는 명령어 (텍스트의 길이나 갯수를 구할 수 있음)
+                    console.log("num : " , num)
+                    console.log("count : " , count)
+
+            setInterval(function(){
+                // if(){
+                //     참일 때
+                // }
+
+                // if(){
+                    // 조건문이 참일 때
+                // } else{
+                    // 거짓일 때 
+                // } 
+
+                // if(조건식 1){
+                //     조건식 1이 참일 때
+                // } else if(조건식 2){
+                //     조건식 2이 참일 때
+                // } else{
+                //     모든 조건식이 거짓일 때
+                // }
+                    $(".fade li").eq(num).fadeOut();
+                    if(num == count){
+                        num = 0;
+                    } else{
+                        num = num + 1;
+                    } //if
+                    console.log("num : " , num)
+                    $(".fade li").eq(num).fadeIn();
+            }, 2000) //setinterval
+
+
+        }) //jquery
+    </script>
+</head>
+<body>
+    <h1>fade in / out</h1>
+    <ul class="fade">
+        <li><a href="#"><img src="img/animal01.png" alt="animal01"></a></li>
+        <li><a href="#"><img src="img/animal02.png" alt="animal02"></a></li>
+        <li><a href="#"><img src="img/animal03.png" alt="animal03"></a></li>
+        <li><a href="#"><img src="img/animal04.png" alt="animal04"></a></li>
+        <li><a href="#"><img src="img/animal05.png" alt="animal05"></a></li>
+        <li><a href="#"><img src="img/animal06.png" alt="animal06"></a></li>
+    </ul>
+</body>
+</html>

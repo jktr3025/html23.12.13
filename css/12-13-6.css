@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    width: 200px;
+    height: 700px;
+    background: bisque;
+    float: left;
+}
+.logo{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.nav{}
+
+.main{
+    width: 160px;
+    margin: 0 auto;
+
+}
+.main > li{
+    position: relative;
+    margin-bottom: 5px;
+}
+.main > li > a{
+    display: block;
+    background: darkgoldenrod;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.main > li:hover > a{
+    background: white;
+    color: darkgoldenrod;
+}
+
+.sub{
+    width: 100%;
+    position: absolute;
+    left: 160px;
+    top: 0;
+    display: none;
+}
+.sub li{}
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+ background: olivedrab;
+ color: tan;
+}
+.sub li a:hover{
+    background: darkolivegreen;
+    color: darkblue;
+}
+
+
+.section{
+    width: 1000px;
+    height: 700px;
+    background: orange;
+    float: left;
+}
